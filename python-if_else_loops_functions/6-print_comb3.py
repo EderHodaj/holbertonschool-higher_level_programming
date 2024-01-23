@@ -7,4 +7,3 @@ for i in range(0, 10):
             print(f"{i}{j}")
         else:
             print(f"{i}{j}", end=", ")
-		

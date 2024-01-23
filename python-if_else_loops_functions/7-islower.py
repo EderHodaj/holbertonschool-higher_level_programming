@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 def islower(c):
-	str = "abcdefghijklmnopqrstuvwxyz"
-	for letter in str:
-		if letter == c:
-			return True
-		else:
-			return False
+    for letter in c:
+        letter = ord(letter)
+        if letter >= 97 and letter <= 122:
+            return True
+        else:
+            return False
+
