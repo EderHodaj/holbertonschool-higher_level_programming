@@ -11,4 +11,4 @@ if __name__ == "__main__":
         print(f"{len(sys.argv) - 1} argumnets")
 
     for index in range(1, n):
-            print(f"{index}: {argv[index]}")
+        print(f"{index}: {argv[index]}")
