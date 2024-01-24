@@ -2,7 +2,8 @@
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         for element in row:
-            print("{:d}".format(element), end=" ")
-            if element in row is row[-1]:
+            if element == row[-1]:
                 print("{:d}".format(element), end="")
+            else:
+                print("{:d}".format(element), end=" ")
         print()
