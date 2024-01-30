@@ -1,23 +1,15 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    roman_numerals = {
-    'I': 1,
-    'IV': 4,
-    'V': 5,
-    'IX': 9,
-    'X': 10,
-    'XL': 40,
-    'L': 50,
-    'XC': 90,
-    'C': 100,
-    'CD': 400,
-    'D': 500,
-    'CM': 900,
-    'M': 1000
-    }
-    count = 0
+    if isinstance(roman_string, str) is False or roman_string is None:
+        return 0
+    single = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    double = {'IV': 4, 'IX': 9, 'XL': 40, 'XC': 90, 'CD': 400, 'CM': 900}
+    result = 0
+    for key in double.keys():
+        if key in roman_string:
+            result += double[key]
+            roman_string = roman_string.replace(key, "")
     for letter in roman_string:
-        for key, value in roman_numerals.items():
-            if letter == key:
-                count += value
-    return count
+        if letter in single:
+            result += single[letter]
+    return result
