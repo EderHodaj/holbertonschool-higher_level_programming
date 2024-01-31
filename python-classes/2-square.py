@@ -6,7 +6,7 @@
 
 class Square:
     '''
-        Creating size using the init method, size must be an integer and greater than 0
+        Size must be an integer and greater than 0
     '''
     def __init__(self, size=0):
         if not isinstance(size, int):
