@@ -2,17 +2,14 @@
 '''
 Testing excercises
 '''
+
+
 def matrix_divided(matrix, div):
     '''
     Function to return a new matrix
     '''
-    if not all(isinstance(row, list) for row in matrix):
+    if not all(isinstance(row, list) and all(isinstance(elem, (int, float)) for elem in row) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-
-    for row in matrix:
-        if not all(isinstance(elem, (int, float)) for elem in row):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-
     count = len(matrix[0])
     for i in matrix:
         if count != len(i):

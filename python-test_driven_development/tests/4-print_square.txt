@@ -1,0 +1,33 @@
+Module 4-print_square
+
+def print_square(size) prints a square with the character # where size is the length of the square
+
+	>>> print_square = __import__('4-print_square').print_square
+
+Function should print square with size "size"
+
+	>>> print_square(2)
+	##
+	##
+
+Size argument should be an int
+
+	>>> print_square('.!.')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Size cannot be a float type or less than 0
+
+	>>> print_square(-1.5)
+	Traceback (most recent call last):
+        TypeError: size must be an integer
+
+size cannot be lower than 0
+	>>> print_square(-2)
+	Traceback (most recent call last):
+        ValueError: size must be >= 0
+
+You need at least an argument
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
