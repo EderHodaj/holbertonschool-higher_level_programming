@@ -20,7 +20,7 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    new_matrix = []  # Initialize as an empty list, not [[]]
+    new_matrix = []
     for row in matrix:
         new_row = []
         for i in row:
