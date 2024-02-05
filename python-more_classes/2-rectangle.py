@@ -6,7 +6,7 @@ Function that defines a rectangle
 
 class Rectangle:
     '''
-    Add attributes widh and height
+    Void
     '''
     def __init__(self, width=0, height=0):
         self.width = width
@@ -35,3 +35,12 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        if self.width == 0 or self.height == 0:
+            return 0
+        else:
+            return 2 * (self.width + self.height)
