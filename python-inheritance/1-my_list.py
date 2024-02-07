@@ -18,4 +18,3 @@ class MyList(list):
         sorted_list = sorted(self)
         print(sorted(self))
         return sorted_list
-
