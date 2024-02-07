@@ -1,12 +1,17 @@
 #!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
+Rectangle = __import__('8-rectangle').Rectangle
 
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+r = Rectangle(3, 5)
+
+print(r)
+print(dir(r))
+
+try:
+    print("Rectangle: {} - {}".format(r.width, r.height))
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    r2 = Rectangle(4, True)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
