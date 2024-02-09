@@ -4,9 +4,6 @@ Input output
 '''
 
 
-import json
-
-
 def class_to_json(obj):
     '''
     Class object to json
