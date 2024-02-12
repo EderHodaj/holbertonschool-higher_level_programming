@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-'''
-Create Rectangle class
-'''
+'''Create Rectangle class'''
 from .base import Base
 
 
 class Rectangle(Base):
-    '''
-    Create class attributes
-    '''
+    '''Create class attributes'''
+
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.__width = width
@@ -17,7 +14,7 @@ class Rectangle(Base):
         self.__y = y
 
     @property
-        width(self):
+    def width(self):
         return self.__width
 
     @width.setter
@@ -25,7 +22,7 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    def height(self):def
+    def height(self):
         return self.__height
 
     @height.setter
