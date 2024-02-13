@@ -41,7 +41,6 @@ class Base:
     def from_json_string(json_string):
         '''Convert to Dict'''
         if json_string is None:
-            return "[]"
+            return []
         else:
-            json_string = json.loads(json_string)
-            return json_string
+            return json.loads(json_string)
