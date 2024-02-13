@@ -93,3 +93,4 @@ class Rectangle(Base):
         width = self.width
         height = self.height
         return {'id': id, 'width': width, 'height': height, 'x': x, 'y': y}
+
